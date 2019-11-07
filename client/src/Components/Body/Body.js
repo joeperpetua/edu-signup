@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 
 //Components
 import Home from "./Home/Home";
@@ -9,9 +9,7 @@ import Home from "./Home/Home";
 import './Body.css';
 
 class Body extends React.Component {
-    constructor(props){
-        super(props);
-    }
+
     
     render(){
         return(
