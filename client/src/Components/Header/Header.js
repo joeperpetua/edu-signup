@@ -12,37 +12,56 @@ import {
 //Styles 
 import './Header.css';
 
+//Components
+import Login from './Login/Login';
+import Signup from './Signup/Signup';
+
 class Header extends Component {
 
     constructor(props){
         super(props);
 
         this.state = {
-            isOpen: false
+            isOpen: false,
         }
 
     }
 
-    
+
+    toggleNav = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
+
+   
+   
 
     render(){
+
+        
+
         return(
             <div>
             <Navbar color="light" light expand="md">
                 <NavbarBrand href="/">Inscripciones E.E.S.T N7</NavbarBrand>
-                <NavbarToggler onClick={ () => this.setState({ isOpen: !this.state.isOpen }) } />
+                <NavbarToggler onClick={ this.toggleNav } />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
+
+
                         <NavItem>
-                            <NavLink href="/login">Iniciar Sesion</NavLink>
+                            <Login />
                         </NavItem>
+                        {' '}
                         <NavItem>
-                            <NavLink href="/signup">Registrarse</NavLink>
+                            <Signup />
                         </NavItem>
                         
                     </Nav>
                 </Collapse>
             </Navbar>
+
+
+            
         </div>
 
         );
