@@ -28,16 +28,16 @@ class Header extends Component {
     render(){
         return(
             <div>
-            <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">Inscripciones E.E.S.T N7</NavbarBrand>
+            <Navbar color="primary" light expand="md">
+                <NavbarBrand href="/" style={{color:"white"}}>Inscripciones E.E.S.T N°7</NavbarBrand>
                 <NavbarToggler onClick={ () => this.setState({ isOpen: !this.state.isOpen }) } />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/login">Iniciar Sesion</NavLink>
+                        <NavItem className="navItem">
+                            <NavLink href="/login" style={{color:"white"}}>Iniciar Sesion</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink href="/signup">Registrarse</NavLink>
+                        <NavItem className="navItem">
+                            <NavLink href="/signup" style={{color:"white"}}>Registrarse</NavLink>
                         </NavItem>
                         
                     </Nav>

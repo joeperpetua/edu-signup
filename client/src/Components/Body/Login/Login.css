@@ -1,3 +1,7 @@
 .login{
-    margin-top: 2%;;
+    margin-top: 2%;
+}
+.hola{
+    border: solid black 1px;
+    padding: 5%;
 }

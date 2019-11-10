@@ -9,7 +9,7 @@ import './Footer.css';
 class Footer extends React.Component {
     render(){
         return(
-            <Container fluid={true} className="footer bg-light">
+            <Container fluid={true} className="footer bg-primary text-light">
                 <Row>
                     <Col sm="4">
                         <h3>Sobre E.E.S.T N7</h3>
