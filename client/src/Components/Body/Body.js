@@ -10,12 +10,26 @@ import './Body.css';
 
 class Body extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            cont: 0
+        }
+
+    }
+
+    componentDidUpdate(){
+        if(this.props.user){
+          var user = this.props.user;
+          console.log(user);
+        }
+    }
     
     render(){
-        return(
-                <Switch>
-                    <Route exact path="/"  component={Home} />
-                </Switch>
+        return(<div></div>
+                // <Switch>
+                //     <Route exact path="/"  render={(props) => <Home {...props} user={this.props.user} />} />
+                // </Switch>
         );
     }
 }

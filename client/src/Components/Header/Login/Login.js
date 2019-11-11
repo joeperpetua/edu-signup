@@ -9,8 +9,12 @@ import { Button,
     ModalBody,
     ModalFooter } from 'reactstrap';
 
+
+
 //Styles 
 import './Login.css';
+
+
 
 class Login extends React.Component {
 
@@ -18,10 +22,22 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            modal: false
+            modal: false,
+            cont: 0
         }
 
     }
+
+    // componentDidUpdate(){
+        
+    //     if(this.state.cont === 1){
+    //         var userData = this.props.userData;
+    //         console.log(userData.user.uid);
+    //     }
+    //     this.state.cont++;
+    //     console.log(this.state.cont);
+
+    // }
 
 
     toggleModal = () => {
@@ -30,7 +46,8 @@ class Login extends React.Component {
     }
 
     render(){
-        const closeBtn = <button className="close" onClick={ this.toggleModal }>&times;</button>;
+        
+
         return(
             <React.Fragment>
                 <Button color="" onClick={ this.toggleModal }>Iniciar Sesion</Button>
@@ -51,6 +68,7 @@ class Login extends React.Component {
 
                         <div className="clearfix">
                             <Button close className="float-left"><i class="fab fa-google-plus-g"></i></Button>
+                            
                         </div>
                                             
                     </ModalBody>

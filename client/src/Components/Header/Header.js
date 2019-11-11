@@ -15,17 +15,26 @@ import './Header.css';
 import Login from './Login/Login';
 import Signup from './Signup/Signup';
 
+
+
 class Header extends Component {
 
     constructor(props){
         super(props);
-
         this.state = {
             isOpen: false,
+            cont: 0
         }
 
     }
 
+
+    componentDidUpdate(){
+        if(this.props.user){
+          var user = this.props.user;
+          console.log(user);
+        }
+    }
 
     toggleNav = () => {
         this.setState({ isOpen: !this.state.isOpen });
@@ -48,19 +57,17 @@ class Header extends Component {
 
 
                         <NavItem>
-                            <Login />
+                            <Login userData={this.props} />
                         </NavItem>
                         {' '}
                         <NavItem>
-                            <Signup />
+                            <Signup userData={this.props} />
                         </NavItem>
                         
                     </Nav>
                 </Collapse>
             </Navbar>
 
-
-            
         </div>
 
         );
